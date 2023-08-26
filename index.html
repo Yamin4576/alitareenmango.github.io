@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/mango.png" type="image/x-icon">
+  <title>ALI TAREEN MANGO FARM</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.min.css">
+  <script src="./fontawesome-free-6.4.2-web/js/all.min.js"></script>
+
+  <style>
+    .navbar-nav {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .header {
+      width: 100%;
+      height: 600px;
+      background-image: url(./img/Untitled\ design.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    h1 {
+      color: rgb(252, 67, 67);
+
+    }
+
+    /* btn start */
+    .btn {
+      border-radius: 5px;
+      border: none;
+      padding: 18px 36px;
+      display: inline-block;
+      font-size: 14px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 0 rgb(255, 201, 85);
+      transition: ease-out 3s;
+    }
+
+    .btn:hover {
+      box-shadow: inset 400px 0 0 0 rgb(255, 201, 85);
+    }
+
+    /* btn end */
+
+    /* card start */
+    .card-text {
+      text-align: justify;
+    }
+
+    /* card end */
+
+    /* Media query for screens smaller than 768px */
+    @media (max-width: 768px) {
+      .header {
+        height: 400px;
+      }
+    }
+
+    /* Media query for screens smaller than 480px */
+    @media (max-width: 480px) {
+      .header {
+        height: 300px;
+        background-size: contain;
+        /* Change background size to contain for smaller screens */
+      }
+    }
+
+    #caption {
+      font-size: 50px;
+      /* Default font size for smaller screens */
+      color: rgb(252, 67, 67);
+      font-weight: 800;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      /* Adjust font size for medium-sized screens */
+      #caption {
+        font-size: 30px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+
+      /* Adjust font size for larger screens */
+      #caption {
+        font-size: 50px;
+      }
+    }
+
+    /* mango varities */
+    .heading {
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+    }
+
+    .col-md-6 {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .img:hover img {
+      transform: scale(1.05);
+    }
+
+    .img img {
+      transition: transform 0.3s;
+    }
+
+    /* mango varities end */
+
+
+    /* card zoom start */
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      transition: transform 0.3s;
+    }
+
+    /* card zoom end */
+
+    /* video start */
+    @media screen and (max-width: 768px) {
+
+/* Adjust font size for medium-sized screens */
+.embed-responsive-item {
+  width: 330px;
+  height: 300px;
+}
+}
+/* video end */
+
+
+    /* footer start */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+
+      a,
+      a:hover,
+      a:focus,
+      a:active {
+        text-decoration: none;
+        outline: none;
+      }
+    }
+
+    a,
+    a:active,
+    a:focus {
+      color: #333;
+      text-decoration: none;
+      transition-timing-function: ease-in-out;
+      -ms-transition-timing-function: ease-in-out;
+      -moz-transition-timing-function: ease-in-out;
+      -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+      transition-duration: .2s;
+      -ms-transition-duration: .2s;
+      -moz-transition-duration: .2s;
+      -webkit-transition-duration: .2s;
+      -o-transition-duration: .2s;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    section {
+      padding: 60px 0;
+      /* min-height: 100vh;*/
+    }
+
+    .footer {
+      background-color: rgb(250, 192, 67);
+      padding-top: 80px;
+      padding-bottom: 40px;
+      margin-top: 100px;
+    }
+
+    /*END FOOTER SOCIAL DESIGN*/
+    .single_footer {
+      @media only screen and (max-width:768px) {
+        .single_footer {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .single_footer h4 {
+      color: rgb(255, 14, 14);
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+
+    .single_footer h4::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 40px;
+      background: #f30b0b;
+      margin-top: 20px;
+    }
+
+    .single_footer p {
+      color: rgb(255, 14, 14);
+    }
+
+    .single_footer ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .single_footer ul li a {
+      color: rgb(255, 255, 255);
+    }
+
+    .single_footer ul li a {
+      -webkit-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      line-height: 36px;
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+
+    .single_footer ul li a:hover {
+      color: #ff3666;
+    }
+
+    .single_footer_address {
+      .single_footer_address ul {
+        .single_footer_address ul li {
+          color: #fff;
+        }
+
+        .single_footer_address ul li span {
+          font-weight: 400;
+          color: rgb(255, 14, 14);
+          line-height: 28px;
+        }
+      }
+
+      .contact_social ul {
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    /*START NEWSLETTER CSS*/
+    .subscribe {
+      display: block;
+      position: relative;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .subscribe__input {
+      background-color: transparent;
+      border-radius: 5px;
+      border: 2px solid white;
+      color: #ffffff;
+      display: block;
+      font-size: 15px;
+      font-weight: 500;
+      height: 60px;
+      letter-spacing: 0.4px;
+      margin: 0;
+      padding: 0 150px 0 20px;
+      text-align: center;
+      text-transform: capitalize;
+      width: 100%;
+    }
+
+    @media only screen and (max-width:768px) {
+      .subscribe__input {
+        padding: 0 50px 0 20px;
+      }
+    }
+
+    .subscribe__btn {
+      background-color: transparent;
+      border-radius: 0 25px 25px 0;
+      color: #ffffff;
+      cursor: pointer;
+      display: block;
+      font-size: 20px;
+      height: 60px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+    }
+
+    .subscribe__btn i {
+      transition: all 0.3s ease 0s;
+    }
+
+    @media only screen and (max-width:768px) {
+      .subscribe__btn {
+        right: 0px;
+      }
+    }
+
+    .subscribe__btn:hover i {
+      color: #ff3666;
+    }
+
+    button {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+    }
+
+    /*END NEWSLETTER CSS*/
+
+    /*START SOCIAL PROFILE CSS*/
+    .social_profile {
+      margin-top: 40px;
+    }
+
+    .social_profile ul {
+      list-style: outside none none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .social_profile ul li {
+      float: left;
+    }
+
+    .social_profile ul li a {
+      text-align: center;
+      border: 0px;
+      text-transform: uppercase;
+      transition: all 0.3s ease 0s;
+      margin: 0px 5px;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      border-radius: 30px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      display: block;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    ::placeholder {
+      color: white;
+    }
+
+    @media only screen and (max-width:768px) {
+      .social_profile ul li a {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+
+    @media only screen and (max-width:480px) {
+      .social_profile ul li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+
+    .social_profile ul li a:hover {
+      background: #ff3666;
+      border: 1px solid #ff3666;
+      border: 0px;
+    }
+
+    /*END SOCIAL PROFILE CSS*/
+    .copyright {
+      margin-top: 70px;
+      padding-top: 40px;
+      color: rgb(255, 14, 14);
+      font-size: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+      text-align: center;
+    }
+
+    .copyright a {
+      color: #f3f3f3;
+      transition: all 0.2s ease 0s;
+    }
+
+    .copyright a:hover {
+      color: #ff3666;
+    }
+
+    /* footer end */
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 50px;
+      right: 30px;
+      z-index: 99;
+      font-size: 30px;
+      border: none;
+      outline: none;
+      background-color: rgb(252, 67, 67);
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: rgb(255, 201, 85);
+      color: rgb(255, 255, 255);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- nav start -->
+  <div class="main">
+    <nav style="background-color:rgb(255, 201, 85)" class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page" href="#head">Home</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page" href="#varity">About
+                Us</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                href="#product">Products</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                href="#ali tareen mango">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page" href="#foot">Help</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                href="mailto:alitareenmango@gmail.com">AliTareenMango@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- nav end -->
+
+  <!-- header start -->
+  <div class="container-fluid header" id="head">
+    <p style="padding-top: 80px;" id="caption"><span style="color: rgb(250, 192, 67);">Mango</span><br> is the perfect
+      summer fruit!</p>
+  </div>
+  <!-- header end -->
+  <!-- mango varities -->
+  <div class="container">
+    <div class="heading text-center mt-5 text-danger" id="varity"><u>Mango Varities</u></div>
+  </div>
+  <!-- card start -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="card" style="width: 18rem;border: none;padding: 8px;">
+          <img src="./img/05d89c76378061428928092c4f488272.webp" class="card-img-top img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><b>Anwar Latore</b></h5>
+            <p class="card-text">Most of which are produced in the areas of Punjab and Sindh province. While these types
+              of Mangoes are well known in their tastes and smells within the country & abroad.
+              The company is first to use G-GAP standard in Pakistan to make export quality.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="card" style="width: 18rem;border: none;padding: 8px;">
+          <img src="./img/IMG_20210715_195216-scaled_1445x.webp" class="card-img-top img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><b>Chonsa Mango</b></h5>
+            <p class="card-text">The fruit has a golden-yellow color when it is soft, is almost fiberless,and has an
+              aromatic, pleasant, sweet flavor.Commonly available varieties in Pakistan are greenish-yellow.The unique
+              taste and richness in its flavor makes it a worldwide favorite.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="card" style="width: 18rem;border: none;padding: 8px;">
+          <img src="./img/LANGRA-MANGO.jpg" class="card-img-top img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><b>Langra Mango</b></h5>
+            <p class="card-text">Langra is known for its vibrant green skin even when ripe.It naturally tastes and rich,
+              with a smooth texture and has a voluptuous juicy pulp.Known for its generous size,the gorgeous tropical
+              fruit will quench your summer thirst.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <div class="card " style="width: 18rem;border: none;padding:10px;">
+          <img style="height: 271px;" src="./img/Mango-Sindhri-PK-DSC_0026-cr-1024x819.jpg"
+            class="card-img-top img-thumbnail" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-danger"><b>Sindhri Mango</b></h5>
+            <p class="card-text">Sindhri mango has been originated from the Mir Pur Khas,Pakistan.The shape
+              of this mango is oval and the skin is bright yellow.This super-aromatic mango is the epitome of taste
+              that is usually sweet but also a little tangy in the early.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text text-center mt-5">
+      <a href="./about.html">
+        <button class="btn btn-danger text-white">SHOW ABOUT US</button>
+
+      </a>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <hr>
+  </div>
+  <!-- card end -->
+
+  <!-- mango varities end-->
+
+  <!-- product 1 start -->
+  <div style="margin-top: 100px;" class="container">
+    <div class="heading text-center mt-5" id="product">
+      <h1><b>Our Products</b></h1>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-6 mt-5">
+        <h1 class="heading">Chaunsa</h1>
+        <p style="word-spacing: 2px;" class="paragraph mt-4">Chaunsa mangoes are among the best types of mangoes in
+          Pakistan. Pakistan’s Chaunsa mango is unquestionably one of the world’s most diverse varieties. It’s still a
+          beautifully sweet mango with a delightful aroma and a delightfully soft, juicy top with only the tiniest
+          amount of fiber. It arrives during Pakistan’s mango season in the summer.
+        </p>
+        <a href="./add.html"><button class="btn btn-danger mt-5">Add To Cart</button></a>
+
+      </div>
+      <div class="col-md-6 mt-5">
+        <div class="img text-center">
+          <img src="./img/1.jpg" alt="" class="img-fluid img-thumbnail shadow" height="380px" width="380px">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 50px;" class="container mt-5">
+    <hr>
+  </div>
+  <!-- product 1 end -->
+  <!-- product 2 start -->
+  <div style="margin-top: 100px;" class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <div class="img text-center">
+          <img src="./img/2.jpg" alt="" class="img-fluid img-thumbnail shadow" height="400px" width="400px">
+        </div>
+      </div>
+      <div class="col-md-6 mt-5">
+        <h1 class="heading"> Sindhri
+        </h1>
+        <p style="word-spacing: 2px;" class="paragraph mt-4">It is said that Sindhri mangoes are one of the best types
+          of mangoes in Pakistan. It is a significant selection of Sindh’s province. The seed is also
+          intermediate-sized, with an oval type figure and long, skin color lemon yellow, large size when mature, pulp
+          color yellowish cadmium, consistency satisfactory and fixed fibreless, and the flavor is pleasingly
+          sweet-smelling in addition to the sensation of taste is sweet.
+        </p>
+        <a href="./add.html"><button class="btn btn-danger mt-5">Add To Cart</button></a>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 50px;" class="container mt-5">
+    <hr>
+  </div>
+  <!-- product 2 end -->
+
+  <!-- product 3 start -->
+  <div style="margin-top: 100px;" class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <h1 class="heading">The Red King/Laal Badshah
+        </h1>
+        <p style="word-spacing: 2px;" class="paragraph mt-4">It is considered to be one of the best types of mangoes in
+          Pakistan to have Red King/Laal Badshah mangoes. The title of Red King is thought to be a creamy mango with a
+          slight red tint. The fair-haired mature into deep as the fruitlet matures. The skin is relatively fixed,
+          contains selected ingredients, and is sweet but not particularly delicious.
+        </p>
+        <a href="./add.html"><button class="btn btn-danger mt-5">Add To Cart</button></a>
+      </div>
+      <div class="col-md-6 mt-5">
+        <div class="img text-center">
+          <img src="./img/3.jpg" alt="" class="img-fluid img-thumbnail shadow" height="400px" width="400px">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 50px;" class="container mt-5">
+    <hr>
+  </div>
+  <!-- product 3 end -->
+  <!-- product 4 start -->
+  <div style="margin-top: 100px;" class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <div class="img text-center">
+          <img src="./img/4.jpg" alt="" class="img-fluid img-thumbnail shadow" height="400px" width="400px">
+        </div>
+      </div>
+      <div class="col-md-6 mt-5">
+        <h1 class="heading">Sunehra
+        </h1>
+        <p style="word-spacing: 2px;" class="paragraph mt-4">Sunehra mangoes are among the most popular types of mangoes
+          in Pakistan. Baganphali is a Sindh variation that is well-known for its large capacity, with an average
+          distance of more than 13 cm. The shape of the fruit remains oval, the color of the skin is dark green, and
+          when the fruit is ready to eat, it becomes yellowish. It arrives in July and lasts into August.
+
+        </p>
+        <a href="./add.html"><button class="btn btn-danger mt-5">Add To Cart</button></a>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 50px;" class="container mt-5">
+    <hr>
+  </div>
+  <!-- product 4 end -->
+
+
+  <!-- product 5 start -->
+  <div style="margin-top: 100px;" class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <h1 class="heading">Anwar Ratol
+        </h1>
+        <p style="word-spacing: 2px;" class="paragraph mt-4">Among the most popular types of mangoes in Pakistan are
+          Anwar Ratols. Anwar Atol is still around because of its delectable taste and enough liquid. It is small in
+          size, has a lot of juice pulp that can be used to make ice cream, has a thick medium skin, the pulp is
+          fibreless, and the Anwar Ratol can be sliced into pieces. It has a very nice taste and a highly sugary flavor.
+          Its period comes from mid of July and lasts until August twice.
+        </p>
+        <a href="./add.html"><button class="btn btn-danger mt-5">Add To Cart</button></a>
+      </div>
+      <div class="col-md-6 mt-5">
+        <div class="img text-center">
+          <img src="./img/5.jpg" alt="" class="img-fluid img-thumbnail shadow" height="400px" width="400px">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 50px;" class="container mt-5">
+    <hr>
+  </div>
+  <!-- product 5 end -->
+  <!-- product 6 start -->
+  <div style="margin-top: 100px;" class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <div class="img text-center">
+          <img src="./img/6.webp" alt="" class="img-fluid img-thumbnail shadow" height="400px" width="400px">
+        </div>
+      </div>
+      <div class="col-md-6 mt-5">
+        <h1 class="heading">Langra
+        </h1>
+        <p style="word-spacing: 2px;" class="paragraph mt-4">One of the most popular types of mangoes in Pakistan is
+          Langra. It withstands the type of Mango, which is in high demand in Europe as well as Canada. It has a sweet
+          sugary taste, has a small oval form with hefty fleshy tissue that appears yellowish-brown, is small in size,
+          has a strong aroma, is very arctic, and fibreless, its skin is green and the peel is thin. From the center of
+          June till August this fruit comes.
+        </p>
+        <a href="./add.html"><button class="btn btn-danger mt-5">Add To Cart</button></a>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 50px;" class="container mt-5">
+    <hr>
+  </div>
+  <!-- product 6 end -->
+
+
+  <!-- product 7 start -->
+  <div style="margin-top: 100px;" class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <h1 class="heading">Dussehri
+        </h1>
+        <p style="word-spacing: 2px;" class="paragraph mt-4">It is among the most popular types of mangoes in Pakistan.
+          The Dussehra is a variety of mango that developed in the 18th century in a village near Kakori in the Lucknow
+          district. It is a sweet and aromatic mango type cultivated in Pakistan, Andhra Pradesh in the South, North
+          India, and Nepal. The most fascinating aspect of the Dussheri Mango is the mother tree, which is over 200
+          years old, and continues to give fruit every other year. As compared to Indian Alphonso Pakistani Dussheri is
+          more delightful and tasty.
+        </p>
+        <a href="./add.html"><button class="btn btn-danger mt-5">Add To Cart</button></a>
+      </div>
+      <div class="col-md-6 mt-5">
+        <div class="img text-center">
+          <img src="./img/7.png" alt="" class="img-fluid img-thumbnail shadow" height="400px" width="400px">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 50px;" class="container mt-5">
+    <hr>
+  </div>
+  <!-- product 7 end -->
+  <!-- product 8 start -->
+  <div style="margin-top: 100px;" class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <div class="img text-center">
+          <img src="./img/8.webp" alt="" class="img-fluid img-thumbnail shadow" height="400px" width="400px">
+        </div>
+      </div>
+      <div class="col-md-6 mt-5">
+        <h1 class="heading">Fajri
+        </h1>
+        <p style="word-spacing: 2px;" class="paragraph mt-4">The UAE is a major exporter of Pakistani mangoes, with the
+          Fajri being particularly popular due to its enormous size and fibreless flesh, which makes it perfect for
+          making pleasant drinks.
+        </p>
+        <a href="./add.html"><button class="btn btn-danger mt-5">Add To Cart</button></a>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top: 50px;" class="container mt-5">
+    <hr>
+  </div>
+  <!-- product 8 end -->
+
+  <div class="container mt-5" id="ali tareen mango">
+    <div style="margin-top: 100px;" class="row">
+      <div class="col-md-7">
+        <h1>Ali Tareen Mango Farm</h1>
+        <p style="text-align: justify;margin-top: 50px;">Ali Tareen Mango Farms (Pvt) Ltd was established in 1987. We
+          are growers,
+          processors and exporters of Mango. We have an export capacity of 6000 tons per year. We would like to
+          introduce ourselves as Producers and Exporters of High Quality Mangoes from Pakistan. <br> Ali Tareen Farm
+          (ATF) Global Gap certified orchard is situated 50 Kms south of Multan in Lodhran
+
+          Mango Plantation at ATF began 15 years ago but was accelerated since 1995. ATF now has 25,000 trees planted.
+          Production has reached 4,500 tons and will increase
+
+          District, which is the heart of the traditional Mango area. Mango Plantation at ATF began 15 years ago but was
+          accelerated since 1995. <br> ATF now has 25,000 trees planted
+
+          Production has reached 4,500 tons and will increase steadily as more and more trees reach fruiting age.
+
+          ATF has established a cold chain for the first time in Pakistan with an on farm Cold Storage and its own
+          refrigerated trucks which ensure delivery of the product to the nearest airport at Lahore in prime condition.
+          <br>
+        </p>
+        <div class="email">
+          <a class="text-warning" href="https://jahangirktareen.com/meet-jkt">jahangirkhantareen.com</a>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <!-- contact form validation start -->
+      <div class="col-md-4">
+        <div class="name">
+          <h1>Contact Us</h1>
+        </div>
+        <div class="form mt-3">
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-12 position-relative">
+              <label for="validationTooltip01" class="form-label">First name</label>
+              <input type="text" class="form-control" id="validationTooltip01" value="" required
+                placeholder="first name">
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-12 position-relative">
+              <label for="validationTooltip02" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="validationTooltip02" value="" required
+                placeholder="last name">
+              <div class="valid-tooltip">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6 position-relative">
+              <label for="validationTooltip03" class="form-label">Address & City</label>
+              <input type="text" class="form-control" id="validationTooltip03" required>
+              <div class="invalid-tooltip">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-6 position-relative">
+              <label for="validationTooltip04" class="form-label">State</label>
+              <select class="form-select" id="validationTooltip04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Lodhran</option>
+                <option>Bahwalpur</option>
+                <option>Hasilpur</option>
+                <option>Multan</option>
+                <option>Lahore</option>
+                <option>Karachi</option>
+                <option>Gujranwala</option>
+                <option>Sialkot</option>
+                <option>Faisalabad</option>
+                <option>Islamabad</option>
+                <option>Muree</option>
+                <option>Queta</option>
+                <option>DG Khan</option>
+                <option>Rawalpindi</option>
+                <option>Gilgit</option>
+
+              </select>
+              <div class="invalid-tooltip">
+                Please select a valid state.
+              </div>
+            </div>
+            <div class="col-md-12 position-relative">
+              <label for="validationTooltip05" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="validationTooltip05" required>
+              <div class="invalid-tooltip">
+                Please provide a valid zip.
+              </div>
+            </div>
+            <div class="col-12 mt-5">
+              <button class="btn btn-danger" type="submit">Submit form</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- contact farm validation end -->
+
+    </div>
+
+    <div class="container">
+      <div style="margin-top: 100px;" class="row">
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+              src="https://www.youtube.com/embed/cUomQpM3LPk?si=ovMnYH5pTxtsUVHu"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen height="500px" width="500px"></iframe>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+              src="https://www.youtube.com/embed/10trKlykv7w?si=BACOZdsUO67nj4cO"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen height="500px" width="500px"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div style="margin-top: 100px;" class="container">
+    <hr>
+  </div>
+  <!-- footer start -->
+  <div class="footer" id="foot">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-4 col-xs-12">
+          <div class="single_footer text-danger">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Fresh From Farm To Door</a></li>
+              <li><a href="#">Export Quality Mangoes</a></li>
+              <li><a href="#">Healthy And Fresh</a></li>
+              <li><a href="#">Premium Quality</a></li>
+              <li><a href="#">Home Delivery.(charges)</a></li>
+            </ul>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="single_footer single_footer_address">
+            <h4>Page Link</h4>
+            <ul>
+              <li><a href="#head">Home</a></li>
+              <li><a href="#varity">About Us</a></li>
+              <li><a href="#product">Products</a></li>
+              <li><a href="#ali tareen mango">Contact Us</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="single_footer single_footer_address">
+            <h4>Subscribe today</h4>
+            <div class="signup_form">
+              <form action="#" class="subscribe">
+                <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+              </form>
+            </div>
+          </div>
+          <div class="social_profile">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+          <p class="copyright">Copyright © 2019 <a href="#">Akdesign</a>.</p>
+        </div>
+        <div class="container-fluid mt-5">
+          <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 text-end text-white">
+              <h4>Developer : Yameen Bhatti</h4>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+  </div>
+  <!-- footer end -->
+  <!-- button -->
+  <div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+  </div>
+  <!-- button end -->
+</body>
+
+</html>
+
+<style>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/mango.png" type="image/x-icon">
+    <title>ALI TAREEN MANGO FARM</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.4.2-web/css/all.min.css">
+    <script src="./fontawesome-free-6.4.2-web/js/all.min.js"></script>
+    <style>
+        .navbar-nav {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .header {
+            width: 100%;
+            height: 600px;
+            background-image: url(./img/Untitled\ design.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Media query for screens smaller than 768px */
+        @media (max-width: 768px) {
+            .header {
+                height: 400px;
+            }
+        }
+
+        /* Media query for screens smaller than 480px */
+        @media (max-width: 480px) {
+            .header {
+                height: 300px;
+                background-size: contain;
+                /* Change background size to contain for smaller screens */
+            }
+        }
+
+        h1 {
+            color: rgb(252, 67, 67);
+
+        }
+
+        #caption {
+  font-size: 50px;
+  color: rgb(252, 67, 67);
+  font-weight: 800;
+}
+#caption {
+      font-size: 50px;
+      /* Default font size for smaller screens */
+      color: rgb(252, 67, 67);
+      font-weight: 800;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      /* Adjust font size for medium-sized screens */
+      #caption {
+        font-size: 30px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+
+      /* Adjust font size for larger screens */
+      #caption {
+        font-size: 50px;
+      }
+    }
+
+
+        .add {
+            width: 500px;
+            background-color: #b67a7a;
+        }
+
+        /* footer start */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+
+            a,
+            a:hover,
+            a:focus,
+            a:active {
+                text-decoration: none;
+                outline: none;
+            }
+        }
+
+        a,
+        a:active,
+        a:focus {
+            color: #333;
+            text-decoration: none;
+            transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-duration: .2s;
+            -ms-transition-duration: .2s;
+            -moz-transition-duration: .2s;
+            -webkit-transition-duration: .2s;
+            -o-transition-duration: .2s;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            padding: 60px 0;
+            /* min-height: 100vh;*/
+        }
+
+        .footer {
+            background-color: rgb(250, 192, 67);
+            padding-top: 80px;
+            padding-bottom: 40px;
+            margin-top: 100px;
+        }
+
+        /*END FOOTER SOCIAL DESIGN*/
+        .single_footer {
+            @media only screen and (max-width:768px) {
+                .single_footer {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        .single_footer h4 {
+            color: rgb(255, 14, 14);
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        .single_footer h4::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 40px;
+            background: #f30b0b;
+            margin-top: 20px;
+        }
+
+        .single_footer p {
+            color: rgb(255, 14, 14);
+        }
+
+        .single_footer ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .single_footer ul li a {
+            color: rgb(255, 255, 255);
+        }
+
+        .single_footer ul li a {
+            -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            line-height: 36px;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+
+        .single_footer ul li a:hover {
+            color: #ff3666;
+        }
+
+        .single_footer_address {
+            .single_footer_address ul {
+                .single_footer_address ul li {
+                    color: #fff;
+                }
+
+                .single_footer_address ul li span {
+                    font-weight: 400;
+                    color: rgb(255, 14, 14);
+                    line-height: 28px;
+                }
+            }
+
+            .contact_social ul {
+                list-style: outside none none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        /*START NEWSLETTER CSS*/
+        .subscribe {
+            display: block;
+            position: relative;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .subscribe__input {
+            background-color: transparent;
+            border-radius: 5px;
+            border: 2px solid white;
+            color: #581c1c;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            height: 60px;
+            letter-spacing: 0.4px;
+            margin: 0;
+            padding: 0 150px 0 20px;
+            text-align: center;
+            text-transform: capitalize;
+            width: 100%;
+        }
+        ::placeholder{
+            color: white;
+        }
+
+        @media only screen and (max-width:768px) {
+            .subscribe__input {
+                padding: 0 50px 0 20px;
+            }
+        }
+
+        .subscribe__btn {
+            background-color: transparent;
+            border-radius: 0 25px 25px 0;
+            color: #ffffff;
+            cursor: pointer;
+            display: block;
+            font-size: 20px;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60px;
+        }
+
+        .subscribe__btn i {
+            transition: all 0.3s ease 0s;
+        }
+
+        @media only screen and (max-width:768px) {
+            .subscribe__btn {
+                right: 0px;
+            }
+        }
+
+        .subscribe__btn:hover i {
+            color: #ff3666;
+        }
+
+        button {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+        }
+
+        /*END NEWSLETTER CSS*/
+
+        /*START SOCIAL PROFILE CSS*/
+        .social_profile {
+            margin-top: 40px;
+        }
+
+        .social_profile ul {
+            list-style: outside none none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .social_profile ul li {
+            float: left;
+        }
+
+        .social_profile ul li a {
+            text-align: center;
+            border: 0px;
+            text-transform: uppercase;
+            transition: all 0.3s ease 0s;
+            margin: 0px 5px;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            display: block;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media only screen and (max-width:768px) {
+            .social_profile ul li a {
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media only screen and (max-width:480px) {
+            .social_profile ul li a {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+
+        .social_profile ul li a:hover {
+            background: #ff3666;
+            border: 1px solid #ff3666;
+            border: 0px;
+        }
+
+        /*END SOCIAL PROFILE CSS*/
+        .copyright {
+            margin-top: 70px;
+            padding-top: 40px;
+            color: rgb(255, 14, 14);
+            font-size: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+        }
+
+        .copyright a {
+            color: #f3f3f3;
+            transition: all 0.2s ease 0s;
+        }
+
+        .copyright a:hover {
+            color: #ff3666;
+        }
+
+        /* footer end */
+    </style>
+</head>
+
+<body>
+    <!-- nav start -->
+    <div class="main">
+        <nav style="background-color:rgb(255, 201, 85)" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                                href="#head">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                                href="#varity">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                                href="#product">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                                href="#ali tareen mango">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                                href="#foot">Help</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a style="color: rgb(255, 14, 14);" class="nav-link active" aria-current="page"
+                                href="mailto:alitareenmango@gmail.com">AliTareenMango@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+    <!-- nav end -->
+
+    <!-- header start -->
+    <div class="container-fluid header" id="head">
+        <p style="padding-top: 80px;" id="caption"><span style="color: rgb(250, 192, 67);">Mango</span><br> is the perfect
+          summer fruit!</p>
+      </div>
+    <!-- header end -->
+
+    <div class="container add" id="farm">
+        <div class="product text-center mt-5">
+            <h1 style="color:white;opacity: 50px;"> <u><b>Home Delivery</b></u></h1>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="col-md-2"></div>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Name</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+                        </div>
+                        <br>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Email</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="email">
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Address 1</label>
+                        <input type="text" class="form-control" id="inputAddress"
+                            placeholder="Apartment, studio, or floor">
+                    </div>
+                    <br>
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <br>
+                        <div class="form-group col-md-6">
+                            <label for="validationTooltip04" class="form-label">Mangoes</label>
+                            <select class="form-select" id="product" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option value="Chaunsa">Chaunsa</option>
+                                <option value="Sindhri">Sindhri</option>
+                                <option value="Dussehri">Dussehri</option>
+                                <option value="The Red King">The Red King (Laal Badshah)</option>
+                                <option value="Sunehra">Sunehra</option>
+                                <option value="Anwar Ratol">Anwar Ratol</option>
+                                <option value="Langra">Langra</option>
+                                <option value="Fajri">Fajri</option>
+                              </select>
+                              <br>
+                              <label for="price">Price:</label>
+                              <input type="text" class="form-control" id="price">
+                            
+                              <script>
+                                const productSelect = document.getElementById('product');
+                                const priceInput = document.getElementById('price');
+                            
+                                const productPrices = {
+                                  Chaunsa: "200/kg",
+                                  Sindhri: "180/kg",
+                                  Dussehri: "220/kg",
+                                  "The Red King": "250/kg",
+                                  Sunehra: "200/kg",
+                                  "Anwar Ratol": "230/kg",
+                                  Langra: "150/kg",
+                                  Fajri: "300/kg",
+                                };
+                            
+                                productSelect.addEventListener('change', () => {
+                                  const selectedProduct = productSelect.value;
+                                  const selectedPrice = productPrices[selectedProduct];
+                            
+                                  if (selectedPrice !== undefined) {
+                                    priceInput.value = selectedPrice;
+                                  } else {
+                                    priceInput.value = 'N/A';
+                                  }
+                                });
+                              </script>
+                            
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Quantity</label>
+                                <input type="text" class="form-control" id="amount" placeholder="kg">
+                            </div>
+                            <br>
+                            <div class="form-group col-md-6">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Check me out
+                                </label>
+                            </div>
+                            <br>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Add To Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    </div>
+    <!-- footer start -->
+    <div class="footer" id="foot">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-4 col-xs-12">
+                    <div class="single_footer text-danger">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Fresh From Farm To Door</a></li>
+                            <li><a href="#">Export Quality Mangoes</a></li>
+                            <li><a href="#">Healthy And Fresh</a></li>
+                            <li><a href="#">Premium Quality</a></li>
+                            <li><a href="#">Home Delivery.(charges)</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Page Link</h4>
+                        <ul>
+                            <li><a href="#head">Home</a></li>
+                            <li><a href="#varity">About Us</a></li>
+                            <li><a href="#product">Products</a></li>
+                            <li><a href="#ali tareen mango">Contact Us</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Subscribe today</h4>
+                        <div class="signup_form">
+                            <form action="#" class="subscribe">
+                                <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                                <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="social_profile">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <p class="copyright">Copyright © 2019 <a href="#">Akdesign</a>.</p>
+                </div>
+                <div class="container-fluid mt-5">
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6 text-end text-danger">
+                            <h4>Developer : Yameen Bhatti</h4>
+                        </div>
+                    </div>
+                </div>
+                <!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </div>
+    <!-- footer end -->
+</body>
+
+</html>
+
